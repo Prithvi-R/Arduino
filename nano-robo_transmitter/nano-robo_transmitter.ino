@@ -2,11 +2,9 @@
 #include <nRF24L01.h> 
 #include <RF24.h> 
  
-RF24 radio(8,9); // CE, CSN 
+RF24 radio(8,9); // CE, CSK
  
-const byte address[6] = "09870"; //Unique Code that will be shared to you by the 
-// coordinators
- 
+const byte address[6] = "09870"; 
 int xAxisValue = 0; 
 int yAxisValue = 0; 
  
