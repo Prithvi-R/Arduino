@@ -1,20 +1,18 @@
-int IRSensor = 9; //connect IR sensor module to Arduino pin D9
-int LED = 13; //connect LED to Arduino pin 13
+int IRSensor = 9;                                     //IR sensor output pin to D9
+int LED = 13;                                         //LED output pin to 13
 void setup() {
-  // put your setup code here, to run once:
-pinMode(IRSensor, INPUT); // IR Sensor pin INPUT
-  pinMode(LED, OUTPUT); // LED Pin Output
+  //put your setup code here, to run once:
+  pinMode(IRSensor, INPUT);                           //Defining IR Sensor pin INPUT
+  pinMode(LED, OUTPUT);                               //Defining LED Pin Output
 }
 
 void loop(){
-  int sensorStatus = digitalRead(IRSensor); // Set the GPIO as Input
-  if (sensorStatus == 0) // Check if the pin high or not
+  int sensorStatus = digitalRead(IRSensor);           //Read the readings of IR Sesnor
+  if (sensorStatus == 0)                              //Check if the pin high or not
   {
-    // if the pin is high turn off the onboard Led
-    digitalWrite(LED, LOW); // LED LOW
+    digitalWrite(LED, LOW);                           //LED to LOW
   }
   else  {
-    //else turn on the onboard LED
-    digitalWrite(LED, HIGH); // LED High
+    digitalWrite(LED, HIGH);                           //LED to High
   }
 }
