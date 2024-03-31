@@ -13,7 +13,6 @@ void setup() {
   Serial.begin(115200); 
   radio.openWritingPipe(address); 
   radio.stopListening(); 
-  pinMode(4, INPUT_PULLUP); 
 } 
 void loop() { 
   int xAxis = analogRead(A0);    //Write code to Read Joysticks X-axis 
